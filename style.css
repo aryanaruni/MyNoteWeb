@@ -1,0 +1,35 @@
+body {
+    background-color: #eef9f9;
+}
+
+#cardContainer {
+    background-color: #eef9f9;
+    border: none;
+}
+
+#addtxttitle {
+    height: 37px;
+    margin-bottom: 7px;
+    background-color: #e9f5e7;
+}
+
+#addtxt {
+    background-color: #e9f5e7;
+}
+
+.cardBox {
+    border: 1px solid #8db2ef;
+    border-radius: 10px;
+    background-color: #e9f5e7;
+
+}
+
+#pbtn {
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+
+#footer {
+    color: white;
+}
