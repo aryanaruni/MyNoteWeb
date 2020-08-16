@@ -104,11 +104,23 @@ function deletenote(index) {
 let searchtxt = document.getElementById('searchtxt');      // grap search box
 searchtxt.addEventListener('input', function () {   //add inpult event on it
 
-    let inputvalue = searchtxt.value.toLowerCase();            // lowercase is used to conver the inputtext into lower case (if user inputs in Upper case) that helps in search the notes
-    let notecard = document.getElementsByClassName('crd');       // grab crd class element
-    Array.from(notecard).forEach(function (element) {                // makeing an array from note card 
-        let cardtxt = element.getElementsByTagName("p")[0].innerText;
-        if (cardtxt.includes(inputvalue)) {
+    let inputvalueU = searchtxt.value;            // lowercase is used to conver the inputtext into lower case (if user inputs in Upper case) that helps in search the notes
+    let notecardU = document.getElementsByClassName('crd');       // grab crd class element
+    Array.from(notecardU).forEach(function (element) {                // makeing an array from note card 
+        let cardtxtU = element.getElementsByTagName("p")[0].innerText;
+        if (cardtxtU.includes(inputvalueU)) {
+            element.style.display = "block";// block is used to show the content
+        }
+        else {
+            element.style.display = "none";          // none is used to not show content
+        }
+    });
+
+    let inputvalueL = searchtxt.value;            // lowercase is used to conver the inputtext into lower case (if user inputs in Upper case) that helps in search the notes
+    let notecardL = document.getElementsByClassName('crd');       // grab crd class element
+    Array.from(notecardL).forEach(function (element) {                // makeing an array from note card 
+        let cardtxtL = element.getElementsByTagName("p")[0].innerText;
+        if (cardtxtL.includes(inputvalueL)) {
             element.style.display = "block";// block is used to show the content
         }
         else {
